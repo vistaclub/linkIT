@@ -252,6 +252,7 @@
 				DEVELOPMENT_TEAM = CFF46R89P9;
 				INFOPLIST_FILE = "Link It/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.xmatters.evo.Link-It";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -266,6 +267,7 @@
 				DEVELOPMENT_TEAM = CFF46R89P9;
 				INFOPLIST_FILE = "Link It/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.xmatters.evo.Link-It";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -291,6 +293,7 @@
 				1547F20B20D47AEE0056BD75 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
