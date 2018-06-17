@@ -18,12 +18,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Creat the app to be a status bar
         item = NSStatusBar.system().statusItem(withLength: NSVariableStatusItemLength)
         // Label the statusbar app as "Link It!"
-        item?.title = "Link It!"
+        // item?.title = "Link It!"
         /*
         Code only there as an example for how to add a menu item
         item?.action = #selector(AppDelegate.linkIt)
         */
-        
+        // Get the image from the Asset.xcassets labeled link
+        item?.image = NSImage(named: "link")
         // Create the menu items to be shown when clicking the status title
         let menu = NSMenu()
         menu.addItem(NSMenuItem(title: "Link It", action: #selector(AppDelegate.linkIt), keyEquivalent: "L"))
