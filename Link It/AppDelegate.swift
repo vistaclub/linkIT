@@ -37,6 +37,37 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func linkIt() {
         // Print the text when the Link It menu item is pressed
         print("WE MADE IT!")
+
+        if let items = NSPasteboard.general().pasteboardItems {
+            for item in items {
+                for type in item.types {
+                    if type == "public.utf8-plain-text" {
+                        if let url = item.string(forType: type) {
+                            //print(url)
+                            NSPasteboard.general().clearContents()
+                            
+                            NSPasteboard.general().setString("<a href=\"\(url)\">\(url)</a>", forType: "public.html")
+                            
+                            printPasteboard()
+                        }
+                    }
+                }
+            }
+        }
+
+        //printPasteboard()
+    }
+    
+    func printPasteboard() {
+        if let items = NSPasteboard.general().pasteboardItems {
+            for item in items {
+                for type in item.types {
+                    print("Type: \(type)")
+                    print("String: \(item.string(forType: type))")
+                }
+            }
+        }
+        
     }
     
     func quit() {
